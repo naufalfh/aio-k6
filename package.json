@@ -1,0 +1,21 @@
+{
+  "name": "aio-k6",
+  "version": "1.0.0",
+  "description": "k6 playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naufalfh/aio-k6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/naufalfh/aio-k6/issues"
+  },
+  "homepage": "https://github.com/naufalfh/aio-k6#readme"
+}
