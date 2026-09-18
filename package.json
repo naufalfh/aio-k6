@@ -1,19 +1,36 @@
 {
   "name": "aio-k6",
   "version": "1.0.0",
-  "description": "k6 playground",
-  "main": "index.js",
+  "description": "Modular k6 performance-test framework (Load/Stress, API/Web, BDD)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:api": "k6 run -e PROFILE=smoke tests/api/order-pizza.test.js",
+    "test:api:load": "k6 run -e PROFILE=load tests/api/order-pizza.test.js",
+    "test:api:stress": "k6 run -e PROFILE=stress tests/api/order-pizza.test.js",
+    "test:api:spike": "k6 run -e PROFILE=spike tests/api/order-pizza.test.js",
+    "test:web": "k6 run -e PROFILE=smoke tests/web/homepage.test.js",
+    "test:web:load": "k6 run -e PROFILE=load tests/web/homepage.test.js",
+    "test:web:stress": "k6 run -e PROFILE=stress tests/web/homepage.test.js",
+    "test:bdd:api": "k6 run -e PROFILE=smoke tests/bdd/api-order-pizza.bdd.test.js",
+    "test:bdd:api:load": "k6 run -e PROFILE=load tests/bdd/api-order-pizza.bdd.test.js",
+    "test:bdd:api:stress": "k6 run -e PROFILE=stress tests/bdd/api-order-pizza.bdd.test.js",
+    "test:bdd:web": "k6 run -e PROFILE=smoke tests/bdd/web-homepage.bdd.test.js",
+    "test:bdd:web:load": "k6 run -e PROFILE=load tests/bdd/web-homepage.bdd.test.js",
+    "test:smoke": "npm run test:api && npm run test:bdd:api && npm run test:web && npm run test:bdd:web"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/naufalfh/aio-k6.git"
   },
-  "keywords": [],
+  "keywords": [
+    "k6",
+    "performance",
+    "load-test",
+    "stress-test",
+    "bdd",
+    "gherkin"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/naufalfh/aio-k6/issues"
   },
